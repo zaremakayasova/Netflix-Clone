@@ -1,22 +1,13 @@
 import React from "react";
-import jumboData from "./fixtures/jumbo.json";
-import Jumbotron from "./components/jumbotron/index";
+import { JumbotronContainer } from "./containers/jumbotron";
+import { FooterContainer } from "./containers/footer";
 
 const App = () => {
   return (
-    <Jumbotron.Container>
-      {jumboData.map((item) => (
-        <Jumbotron key={item.id} direction={item.direction}>
-          <Jumbotron.Pane>
-            <Jumbotron.Title>{item.title}</Jumbotron.Title>
-            <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
-          </Jumbotron.Pane>
-          <Jumbotron.Pane>
-            <Jumbotron.Image>{item.image}</Jumbotron.Image>
-          </Jumbotron.Pane>
-        </Jumbotron>
-      ))}
-    </Jumbotron.Container>
+    <div>
+      <JumbotronContainer />
+      <FooterContainer />
+    </div>
   );
 };
 
